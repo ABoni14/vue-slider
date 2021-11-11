@@ -28,10 +28,16 @@ const app = new Vue({
     counter: 0
   },
 
+  // mounted(){
+  //   setInterval(() => {
+  //     this.nextImage();
+  //   }, 3000)
+  // },
+
   methods:{
     nextImage(){
       this.counter++;
-      if(this.counter > this.image.length - 1){
+      if(this.counter > this.images.length - 1){
         this.counter = 0;
       }
     },
@@ -41,8 +47,6 @@ const app = new Vue({
       if(this.counter < 0){
         this.counter = this.images.length -1;
       }
-    }
-    
+    }   
   }
-
 })
