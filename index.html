@@ -10,8 +10,34 @@
 </head>
 <body>
   
-    
-  </div>
+    <div id="app">
+      <div class="ab-container d-flex justify-content-center align-items-center">
+        <div class="slider">
+          <div class="row g-0 ab-row">
+            <div class="col-10 ab-col10">
+              <div class="item active">
+                <img class="w-100" :src="images[counter]" alt="immagine grande">
+                <div class="description">
+                  <h4>{{titles[counter]}}</h4>
+                  <p>{{text[counter]}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 flex-column ab-col2">
+              <div class="item-small active-img">
+                <img :src="images[counter]" alt="">
+              </div>
+
+              <div @click="nextImage" class="prev"><i class="fas fa-chevron-up"></i></div>
+              <div @click="prevImage" class="next"><i class="fas fa-chevron-down"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
